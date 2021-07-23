@@ -53,7 +53,7 @@ async def game(message: types.Message, state: FSMContext):
         if '_' not in in_word:
             user['full'] = 2
     if user['mistake'] == 10:
-        await message.answer("Игра окончена вы проиграли")
+        await message.answer("Игра окончена вы проиграли :(")
         await state.finish()
     if user['mistake'] < 10 and user['full'] == 2:
         await message.answer("Вы выиграли")
